@@ -12,7 +12,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
+        roboto: ['var(--font-roboto)'],
+        playfair: ['var(--font-playfair)'],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
