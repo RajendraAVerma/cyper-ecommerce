@@ -62,7 +62,7 @@ const menuList = [
         icon: <ShoppingCartOutlinedIcon className="w-5 h-5" />,
         list: [
             {
-                slug: 'orders/list-view',
+                slug: '/dashboard/orders',
                 name: 'List View',
             },
             {
