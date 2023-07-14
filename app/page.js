@@ -14,7 +14,7 @@ const categories = [
     slug: '/bride-and-groom',
   },
   {
-    name: "Saree",
+    name: "Sarees",
     slug: '/saree',
   },
   {
