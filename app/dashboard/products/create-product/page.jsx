@@ -1,6 +1,6 @@
 'use client'
 
-import { CardGiftcard, Image } from "@mui/icons-material";
+import { CardGiftcard, CloudUploadRounded, Filter, FormatListBulletedRounded, Image, ListAlt } from "@mui/icons-material";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useState, useRef } from 'react';
@@ -15,7 +15,7 @@ export default function Page() {
             <h4 className="text-[#777777] text-sm">Product {" > "} Create product</h4>
         </div>
         {/* form  */}
-        <form className="grid grid-cols-4 gap-4">
+        <form className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="col-span-3 flex flex-col gap-5">
                 <div className="border rounded border-[#e9ebec]">
                     <div className="flex gap-4 text-[#222222] font-bold p-5 border-[#e9ebec] border-b">
@@ -56,7 +56,7 @@ export default function Page() {
                 <div className="border rounded border-[#e9ebec]">
                     <div className="flex gap-4 text-[#222222] font-bold p-5 border-[#e9ebec] border-b">
                         <div className="w-12 h-12 flex justify-center items-center rounded-full bg-[#f3f6f9]">
-                            <Image className="h-7 w-7 font-medium text-[#4b93fe]" />
+                            <Filter className="h-7 w-7 font-medium text-[#4b93fe]" />
                         </div>
                         <div>
                             <h1 className="font-bold">Product Gallery</h1>
@@ -67,6 +67,107 @@ export default function Page() {
                         <div className="flex flex-col text-sm">
                             <ProductGalleryDropBox />
                         </div>
+                    </div>
+                </div>
+                <div className="border rounded border-[#e9ebec]">
+                    <div className="flex gap-4 text-[#222222] font-bold p-5 border-[#e9ebec] border-b">
+                        <div className="w-12 h-12 flex justify-center items-center rounded-full bg-[#f3f6f9]">
+                            <FormatListBulletedRounded className="h-7 w-7 font-medium text-[#4b93fe]" />
+                        </div>
+                        <div>
+                            <h1 className="font-bold">General Information</h1>
+                            <h1 className="font-medium text-sm text-[#878a99]">Fill all information below.</h1>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-5 p-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="col-span-1 flex flex-col gap-4">
+                                <div className="flex flex-col text-sm">
+                                    <label className="font-semibold pb-2" htmlFor="category">Manufacturer Name</label>
+                                    <input
+                                        placeholder="Enter manufacturer name"
+                                        className="border rounded px-4 py-2 outline-blue-400 focus:outline" />
+                                </div>
+                                <div className="flex gap-3">
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="stocks">Stocks</label>
+                                        <input
+                                            placeholder="Stocks"
+                                            className="border rounded w-full  px-4 py-2 outline-blue-400 focus:outline" />
+                                    </div>
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="Price">Price</label>
+                                        <div className="relative">
+                                            <span className="absolute left-3 top-2 text-gray-500 font-bold">₹</span>
+                                            <input
+                                                placeholder="Price"
+                                                className="border rounded w-full pl-8 pr-4 py-2 outline-blue-400 focus:outline"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex gap-2 drop-shadow-sm">
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="Colors">Colors</label>
+                                        <div className="flex flex-wrap gap-4">
+                                            {['07ffbe', '25c8ff', 'ffc94a', 'ff4b76', '4b86ff', '856aff', '000000', 'f4f6fa'].map((code) => {
+                                                return <div
+                                                    style={{
+                                                        backgroundColor: `#${code}`,
+                                                    }}
+                                                    className="w-9 h-9 rounded-full cursor-pointer hover:bg-opacity-60 duration-300 ease-in-out transition-all"
+                                                >
+                                                </div>
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-span-1 flex flex-col gap-4">
+                                <div className="flex flex-col text-sm">
+                                    <label className="font-semibold pb-2" htmlFor="category">Manufacturer brand</label>
+                                    <input
+                                        placeholder="Enter manufacturer brand"
+                                        className="border rounded px-4 py-2 outline-blue-400 focus:outline" />
+                                </div>
+                                <div className="flex gap-3">
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="Discount">Discount</label>
+                                        <div className="relative">
+                                            <span className="absolute left-3 top-2 text-gray-500 font-bold">%</span>
+                                            <input
+                                                placeholder="Discount"
+                                                className="border rounded w-full pl-8 pr-4 py-2 outline-blue-400 focus:outline"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="Order">Order</label>
+                                        <input
+                                            placeholder="Order"
+                                            className="border rounded w-full px-4 py-2 outline-blue-400 focus:outline" />
+                                    </div>
+                                </div>
+                                <div className="flex gap-2 drop-shadow-sm">
+                                    <div className="flex-1 flex flex-col text-sm">
+                                        <label className="font-semibold pb-2" htmlFor="sizes">Sizes</label>
+                                        <div className="flex flex-wrap gap-4">
+                                            {['XL', 'S', 'M', 'L', 'XL', '2XL', '3XL', '40', '41', '42'].map((code) => {
+                                                return <div className="flex justify-center items-center text-xs w-9 h-9 font-bold rounded-full cursor-pointer bg-[#7ba8eb53] hover:bg-[#4484e6] hover:text-white text-[#4484e6] ease-in-out duration-300 transition-all" >
+                                                    {code}
+                                                </div>
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex justify-end">
+                    <div></div>
+                    <div className="hover:bg-[#05b688] bg-[#06d6a0] font-bold rounded-md px-6 py-3 text-white ease-in-out duration-300 transition-all">
+                        Submit
                     </div>
                 </div>
             </div>
@@ -117,7 +218,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-
         </form>
     </section>
 }
@@ -183,7 +283,7 @@ function ProductTags() {
                 ref={inputRef}
                 type="text"
                 placeholder="Enter tags separated by comma"
-                className="border rounded p-2"
+                className="border rounded p-2  outline-blue-400 focus:outline"
                 onKeyDown={(event) => {
                     if (event.key === 'Enter' || event.key === ',') {
                         event.preventDefault();
@@ -209,6 +309,7 @@ function ProductTags() {
     );
 }
 
+
 function ProductGalleryDropBox() {
     const [selectedImages, setSelectedImages] = useState([]);
 
@@ -229,7 +330,10 @@ function ProductGalleryDropBox() {
 
         Promise.all(selectedFilePromises)
             .then((selectedFiles) => {
-                setSelectedImages((prevSelectedImages) => [...prevSelectedImages, ...selectedFiles]);
+                setSelectedImages((prevSelectedImages) => [
+                    ...prevSelectedImages,
+                    ...selectedFiles,
+                ]);
             })
             .catch((error) => {
                 console.error('Error occurred while uploading images:', error);
@@ -245,8 +349,11 @@ function ProductGalleryDropBox() {
     };
 
     return (
-        <div>
-            <label htmlFor="image-upload" className="cursor-pointer border border-dashed border-gray-400 rounded p-4 text-center">
+        <div className="flex flex-col justify-center items-center cursor-pointer border-2 border-dashed border-[#b9bdc8] rounded p-4 text-center hover:border-gray-500">
+            <label
+                htmlFor="image-upload"
+
+            >
                 <input
                     type="file"
                     id="image-upload"
@@ -254,31 +361,26 @@ function ProductGalleryDropBox() {
                     accept="image/*"
                     className="hidden"
                     onChange={handleImageUpload}
+                    aria-label="Upload Images"
                 />
-                <div className="text-gray-500">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="w-12 h-12 mx-auto mb-2"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                    </svg>
+                <div className="text-gray-500  cursor-pointer">
+                    <CloudUploadRounded className="w-16 h-16 mx-auto mb-2" />
                     <p>Drag and drop images here or click to upload</p>
                 </div>
             </label>
             <div className="mt-4 flex flex-wrap">
                 {selectedImages.map((image, index) => (
-                    <div key={index} className="relative w-24 h-24 overflow-hidden rounded mr-2 mb-2">
-                        <img src={image.previewURL} alt={`Image ${index}`} className="object-cover w-full h-full" />
+                    <div
+                        key={index}
+                        className="relative w-24 h-24 overflow-hidden rounded mr-2 mb-2"
+                    >
+                        <img
+                            src={image.previewURL}
+                            alt={`Image ${index}`}
+                            className="object-cover w-full h-full"
+                        />
                         <button
-                            className="absolute top-0 right-0 bg-red-500 text-white rounded-full p-1 m-1 hover:bg-red-600 transition duration-300"
+                            className="h-6 w-6 absolute top-0 right-0 bg-red-500 text-white rounded-full p-1 m-1 hover:bg-red-600 transition duration-300"
                             onClick={() => handleImageRemove(index)}
                             aria-label="Remove Image"
                         >
@@ -290,3 +392,4 @@ function ProductGalleryDropBox() {
         </div>
     );
 }
+

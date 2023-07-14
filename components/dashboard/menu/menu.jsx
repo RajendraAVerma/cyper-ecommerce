@@ -48,7 +48,11 @@ const menuList = [
                 name: 'Create Product',
             },
             {
-                slug: 'dashboard/products/Categories',
+                slug: 'dashboard/products/categories',
+                name: 'Categories',
+            },
+            {
+                slug: 'dashboard/products/sub-categories',
                 name: 'Sub Categories',
             }
         ]
