@@ -32,27 +32,27 @@ const menuList = [
         icon: <StorefrontOutlinedIcon className="w-5 h-5" />,
         list: [
             {
-                slug: 'dashboard/products',
+                slug: '/dashboard/products',
                 name: 'List View',
             },
             {
-                slug: 'dashboard/products?view=gridview',
+                slug: '/dashboard/products?view=gridview',
                 name: 'Grid View',
             },
             {
-                slug: 'dashboard/products/overview',
+                slug: '/dashboard/products/overview',
                 name: 'Overview',
             },
             {
-                slug: 'dashboard/products/create-product',
+                slug: '/dashboard/products/create-product',
                 name: 'Create Product',
             },
             {
-                slug: 'dashboard/products/categories',
+                slug: '/dashboard/products/categories',
                 name: 'Categories',
             },
             {
-                slug: 'dashboard/products/sub-categories',
+                slug: '/dashboard/products/sub-categories',
                 name: 'Sub Categories',
             }
         ]
@@ -66,7 +66,7 @@ const menuList = [
                 name: 'List View',
             },
             {
-                slug: 'orders/overview',
+                slug: '/dashboard/orders/overview',
                 name: 'Overview',
             },
         ]
@@ -81,7 +81,7 @@ const menuList = [
         icon: <Inventory2OutlinedIcon className="w-5 h-5" />,
         list: [
             {
-                slug: 'sellers/list-view',
+                slug: '/dashboard/sellers',
                 name: 'List View',
             },
             {
