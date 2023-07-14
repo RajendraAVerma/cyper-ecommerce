@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 export default function ProductPage() {
     const searchParams = useSearchParams();
-
     const view = searchParams.get('view');
     const isGridView = view === "gridview";
 
