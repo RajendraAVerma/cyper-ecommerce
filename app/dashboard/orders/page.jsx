@@ -47,7 +47,7 @@ export default function Page() {
 
 function CustomCard({ heading, value, icon, colorCode }) {
     return <>
-        <div className="flex justify-start border rounded p-4 gap-4 hover:shadow-lg hover:ease-in-out hover:-translate-y-1 hover:duration-300">
+        <div className="flex justify-start border rounded p-4 gap-4 hover:shadow-lg ease-in-out hover:-translate-y-1 duration-300">
             <div className=''>
                 <div
                     style={{ color: `${colorCode}`, backgroundColor: `${colorCode}30`, }}

@@ -84,10 +84,10 @@ const menuList = [
                 slug: '/dashboard/sellers',
                 name: 'List View',
             },
-            {
-                slug: 'sellers/grid-view',
-                name: 'Grid View',
-            },
+            // {
+            //     slug: 'sellers/grid-view',
+            //     name: 'Grid View',
+            // },
             {
                 slug: 'sellers/overview',
                 name: 'Overview',
@@ -99,21 +99,21 @@ const menuList = [
         icon: <ReceiptOutlinedIcon className="w-5 h-5" />,
         list: [
             {
-                slug: 'invoice/list-view',
+                slug: '/dashboard/invoices',
                 name: 'List View',
             },
             {
-                slug: 'invoice/overview',
+                slug: '/dashboard/invoices/overview',
                 name: 'Overview',
             },
             {
-                slug: 'invoice/create-invoice',
+                slug: '/dashboard/invoices/create',
                 name: 'Create Invoice',
             },
         ]
     },
     {
-        slug: '/users-list',
+        slug: '/dashboard/users',
         name: 'User List',
         icon: <PeopleAltOutlinedIcon className="w-5 h-5" />,
     },

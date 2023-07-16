@@ -42,7 +42,7 @@ export default function OverviewCards() {
 
 function CustomCard({ heading, value, icon, percent, colorCode }) {
     return <>
-        <div className="flex justify-between border rounded p-4 gap-2.5 hover:shadow-lg hover:ease-in-out hover:-translate-y-1 hover:duration-300">
+        <div className="flex justify-between border rounded p-4 gap-2.5 hover:shadow-lg ease-in-out hover:-translate-y-1 duration-300">
             <div className='flex gap-2.5'>
                 <div
                     style={{ backgroundColor: `${colorCode}60` }}
